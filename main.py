@@ -15,11 +15,11 @@ x = []
 y = []
 counter = 0
 
-if os.path.isfile("model.joblib") == False:
+if os.path.isfile("model.joblib") is False:
     print "Model not already created. Creating model..."
     print "Opening database..."
-    with open('train.csv', 'rb') as file:
-        csvfile = csv.reader(file)
+    with open('train.csv', 'rb') as trainFile:
+        csvfile = csv.reader(trainFile)
         print "Loading database into memory..."
         for row in csvfile:
             counter = counter + 1
