@@ -50,9 +50,9 @@ else:
 
 testArray = np.array([])
 testArray256 = np.array([])
-with open('test.csv', 'rb') as file:
+with open('test.csv', 'rb') as testFile:
     counter2 = 0
-    csvfile = csv.reader(file)
+    csvfile = csv.reader(testFile)
     for i, row in enumerate(csvfile):
         if i == 24163:
             for column in row[1:]:
